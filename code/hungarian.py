@@ -8,7 +8,36 @@ except ImportError:
     linear_sum_assignment = None
 
 
+import itertools
+
+try:
+    import numpy as np
+    from scipy.optimize import linear_sum_assignment
+except ImportError:
+    np = None
+    linear_sum_assignment = None
+
+
 def brute_force_assignment(cost_matrix, workers, tasks):
+    """
+    Solves the assignment problem using brute force by trying all permutations.
+    
+    This is used as a fallback when scipy is not available. It finds the minimum
+    cost assignment by checking every possible worker-task pairing.
+    
+    Args:
+        cost_matrix (list of lists): 2D list where cost_matrix[i][j] is the cost
+                                    of assigning worker i to task j.
+        workers (list): List of worker names/identifiers.
+        tasks (list): List of task names/identifiers.
+    
+    Returns:
+        tuple: (matches, total_cost) where matches is list of (worker_idx, task_idx)
+               pairs and total_cost is the minimum total cost.
+    
+    Raises:
+        ValueError: If there are fewer tasks than workers.
+    """
     if len(tasks) < len(workers):
         raise ValueError("Need at least as many tasks as workers for a full assignment.")
 
@@ -16,6 +45,7 @@ def brute_force_assignment(cost_matrix, workers, tasks):
     best_perm = None
 
     task_indices = range(len(tasks))
+    # Try all possible assignments of workers to tasks
     for permutation in itertools.permutations(task_indices, len(workers)):
         cost = sum(cost_matrix[worker_idx][task_idx] for worker_idx, task_idx in enumerate(permutation))
         if best_cost is None or cost < best_cost:
@@ -26,17 +56,44 @@ def brute_force_assignment(cost_matrix, workers, tasks):
 
 
 def hungarian(cost_matrix, workers, tasks):
+    """
+    Solves the assignment problem using the Hungarian algorithm.
+    
+    Uses scipy's linear_sum_assignment if available (efficient implementation),
+    otherwise falls back to brute force method.
+    
+    Args:
+        cost_matrix (list of lists): 2D list where cost_matrix[i][j] is the cost
+                                    of assigning worker i to task j.
+        workers (list): List of worker names/identifiers.
+        tasks (list): List of task names/identifiers.
+    
+    Returns:
+        tuple: (matches, total_cost) where matches is list of (worker_idx, task_idx)
+               pairs and total_cost is the minimum total cost.
+    """
     if linear_sum_assignment is not None and np is not None:
+        # Use efficient scipy implementation
         cost_array = np.array(cost_matrix)
         row_ind, col_ind = linear_sum_assignment(cost_array)
         matches = list(zip(row_ind.tolist(), col_ind.tolist()))
         total_cost = sum(cost_matrix[row][col] for row, col in matches)
         return matches, total_cost
 
+    # Fallback to brute force if scipy not available
     return brute_force_assignment(cost_matrix, workers, tasks)
 
 
 def print_assignment(title, cost_matrix, workers, tasks):
+    """
+    Runs the Hungarian algorithm and prints the optimal assignment with costs.
+    
+    Args:
+        title (str): Title to display for the test case.
+        cost_matrix (list of lists): Cost matrix for the assignment problem.
+        workers (list): List of worker names.
+        tasks (list): List of task names.
+    """
     print(f"=== {title} ===")
     matches, total_cost = hungarian(cost_matrix, workers, tasks)
     for worker_idx, task_idx in matches:
