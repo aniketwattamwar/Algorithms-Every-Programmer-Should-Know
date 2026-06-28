@@ -2,15 +2,158 @@
 
 ## Table of Contents
 
-- [Gale-Shapley Algorithm](docs/algorithms/gale-shapley.md)
-- [Rabin-Karp Algorithm](docs/algorithms/rabin-karp.md)
-- [Knuth-Morris-Pratt (KMP) Algorithm](docs/algorithms/knuth-morris-pratt.md)
-- [Hungarian Algorithm](docs/algorithms/hungarian.md)
-- [Horspool's Algorithm](docs/algorithms/horspool.md)
-- [Floyd-Warshall Algorithm](docs/algorithms/floyd-warshall.md)
-- [Push-Relabel](docs/algorithms/push-relabel.md)
-- [Bron-Kerbosch](docs/algorithms/bron-kerbosch.md)
-- [A* Algorithm](docs/algorithms/a-star.md)
-- [Ant Colony Optimization](docs/algorithms/ant-colony-optimization.md)
-- [Adaptive Replacement Cache](docs/algorithms/adaptive-replacement-cache.md)
-﻿
+### Part 1: Foundations, Matching and Assignment Problems
+- [Chapter 1: The Language of Algorithms](docs/algorithms/the-language-of-algorithms.md)
+  - Setting the Scene
+  - Basics of Algorithm
+  - Algorithms and why do we need them?
+  - Analysis of Algorithms
+  - Time and Space Complexity
+  - Data Structures
+    - HashMaps
+    - Linked Lists
+    - Stacks and Queues
+    - Trees
+    - Graphs
+  - Summary
+- [Chapter 2: Gale-Shapley Algorithm](docs/algorithms/gale-shapley.md)
+  - The stable matching algorithm 
+  - One-pass matching
+  - When preferences collide, rejection and rematching
+  - Understanding the bias and complexity analysis
+  - Real-world applications
+    - Online dating and matchmaking
+    - Ride sharing and delivery matching
+    - Kolkata Paise Restaurant Problem (KPR model)
+    - National Resident Matching Program (NRMP)
+  - Key Insights
+    - Everyone gets matched
+    - Stability over optimality
+    - Deferred acceptance principle
+    - Weighted and dynamic matching 
+  - Summary
+- [Chapter 3: Hungarian Algorithm](docs/algorithms/hungarian.md)
+  - Allocation problem in a nutshell
+  - Real-World Applications
+    - Crew Scheduling in Airlines
+    - Job scheduling in distributed cloud systems
+  - Key Insights
+    - Always optimal and deterministic
+    - Scaling can be an issue
+    - Bipartite graph representation
+  - Summary
+
+### Part 2: String Algorithms
+- [Chapter 4: Rabin-Karp Algorithm](docs/algorithms/rabin-karp.md)
+  - String matching algorithm
+  - Collisions and improved hash function
+  - Rolling hash with Base-10 powers
+  - Where Rabin–Karp shines in real world
+    - Plagiarism Detection
+    - Bioinformatics
+  - Summary
+- [Chapter 5: Knuth-Morris-Pratt Algorithm](docs/algorithms/knuth-morris-pratt.md)
+  - Fast pattern matching
+  - Building the LPS array
+  - The KMP shift execution
+  - Real-World applications
+    - Log analysis and real-time data streaming
+    - Intrusion Detection Systems (IDS)
+  - Key Takeaways
+    - The cost of preprocessing and overhead
+    - Separating complexity
+    - The ‘no redundancy’ trap
+  - Summary
+- [Chapter 6: Horspool's Algorithm](docs/algorithms/horspool.md)
+  - The paradigm shift: Right to left scanning
+  - Bad character shift table
+  - Handling internal redundancy
+  - Building the shift table for redundant pattern
+  - Executing the Horspool algorithm
+  - Real-World applications
+    - Relational Databases
+    - The V8 javascript engine
+  - Algorithm significance and nuances
+    - The Sub-Linear advantage
+    - The dependency on alphabet size
+    - The Binary and repetitive pattern edge case
+  - Summary
+
+### Part 3: Optimization Algorithms
+- [Chapter 7: Knapsack Algorithm](docs/algorithms/knapsack.md)
+  - Dynamic programming and the 2D matrix
+  - Defining the 0/1 constraints
+  - Overlapping subproblems
+  - Real-world applications
+    - Cloud resource allocation
+    - Portfolio optimization
+  - Alternatives and Key Insights
+  - Summary
+- [Chapter 8: Ant colony optimization](docs/algorithms/ant-colony-optimization.md)
+  - Optimisation inspired by biology
+  - Pheromones, Paths and Probabilities
+  - Convergence
+  - Real-World Impact
+    - Logistics
+    - Network Routing
+  - Alternatives and Further Optimizations
+  - Summary
+
+### Part 4: Graph Algorithms
+- [Chapter 9: Floyd-Warshall Algorithm](docs/algorithms/floyd-warshall.md)
+  - All Pairs Shortest Path
+  - Dynamic Programming
+  - Shortest Path Distance Matrix
+  - Real-World Scenarios
+    - Network Routing
+    - Urban Traffic Analysis
+  - Key Insights and Limitations
+  - Summary
+- [Chapter 10: Push Relabel](docs/algorithms/push-relabel.md)
+  - Network Flow Problem
+  - How does flow work?
+  - Weights, and Excess, 
+  - Industrial Applications
+    - Telecommunications
+    - Supply Chain
+  - Algorithmic Insights
+    - Local Decisions
+  - Alternatives
+  - Limitations and Challenges
+  - Summary
+- [Chapter 11: Bron Kerbosch](docs/algorithms/bron-kerbosch.md)
+  - What is a clique, and why is it important?
+  - Brute Force
+  - Backtracking Explained
+  - Efficiency
+  - Real-world use cases
+    - Social network 
+    - Bioinformatics
+  - Lessons Learned with insights
+  - Summary
+- [Chapter 12: A* algorithm](docs/algorithms/a-star.md)
+  - Informed search algorithm
+  - Heuristics and Guesses
+  - Cost and Distance
+  - Where A* works best
+    - Navigation Systems
+    - Game AI
+  - Strengths and Pitfalls
+  - Summary
+
+### Part 5: System and Memory Algorithms
+- [Chapter 13: Adaptive replacement cache](docs/algorithms/adaptive-replacement-cache.md)
+  - Another caching technique?
+  - LRU vs LFU 
+  - ARU adaptation
+  - Cache hits and misses
+  - Systems that rely on ARC
+    - Databases
+    - Operating Systems
+  - Key Takeaways
+  - Summary
+- [Chapter 14: What are all these algorithms really teaching us?](docs/algorithms/reflection.md)
+  - Reflection
+  - Algorithmic thinking
+
+### References
