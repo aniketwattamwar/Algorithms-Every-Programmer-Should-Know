@@ -1,10 +1,16 @@
 def knapsack(W, wt, val, n):
     """
     Solves the 0/1 Knapsack problem using Dynamic Programming.
-    W: Maximum weight capacity
-    wt: List of weights
-    val: List of values
-    n: Number of items
+    
+    Args:
+        W (int): Maximum weight capacity of the knapsack.
+        wt (list): List of weights of the items.
+        val (list): List of values of the items.
+        n (int): Number of items available.
+        
+    Returns:
+        list: A 2D array representing the DP table, where K[i][w] contains 
+              the maximum value for the first i items with weight limit w.
     """
     # Initialize DP table
     # Rows: 0 to n (number of items)
