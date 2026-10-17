@@ -69,7 +69,7 @@ function REPLACE(x):
 ## Python implementation
 
 The complete implementation and the Chapter 13 cache trace are in
-[code/adaptive_replacement_cache.py](../../code/adaptive_replacement_cache.py).
+[ch_13_code_adaptive_replacement_cache.py](ch_13_code_adaptive_replacement_cache.py).
 Its `access(page, fetch)` method returns the fetched or cached value along with
 the result kind: `hit`, `ghost_hit_b1`, `ghost_hit_b2`, or `miss`.
 
@@ -77,4 +77,3 @@ Run the implementation directly to print the list state after each access in
 the four-slot example. `p` moves up when a page in `B1` is requested again and
 down when a page in `B2` is requested again, allowing ARC to adapt between
 recency and frequency.
-

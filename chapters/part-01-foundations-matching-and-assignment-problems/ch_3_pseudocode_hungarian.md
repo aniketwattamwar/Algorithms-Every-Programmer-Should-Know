@@ -2,6 +2,10 @@
 
 The Hungarian algorithm solves the assignment problem by finding the minimum-cost matching between workers and tasks. In this repository, it uses `scipy.optimize.linear_sum_assignment` when available, with a fallback to brute-force assignment.
 
+## Python implementation
+
+The implementation is in [ch_3_code_hungarian.py](ch_3_code_hungarian.py).
+
 ## Pseudocode
 
 ```text

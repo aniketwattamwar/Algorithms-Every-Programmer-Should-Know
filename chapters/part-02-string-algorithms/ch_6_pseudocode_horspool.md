@@ -4,6 +4,10 @@ Horspool's algorithm is a simplified version of the Boyer-Moore string search al
 It uses a bad-character shift table to skip over sections of the text quickly when a
 mismatch occurs.
 
+## Python implementation
+
+The implementation is in [ch_6_code_horspool.py](ch_6_code_horspool.py).
+
 ## How it works
 
 - Precompute a bad character table for the pattern.

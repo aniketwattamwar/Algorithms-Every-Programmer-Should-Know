@@ -2,6 +2,10 @@
 
 Knuth-Morris-Pratt efficiently searches for a pattern in text by precomputing a longest-prefix-suffix array that lets it skip unnecessary comparisons.
 
+## Python implementation
+
+The implementation is in [ch_5_code_knuth_morris_pratt.py](ch_5_code_knuth_morris_pratt.py).
+
 ## Pseudocode
 
 ```text
