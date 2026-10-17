@@ -47,11 +47,10 @@ goal returns `(None, infinity)`.
 ## Python implementation
 
 The complete implementation, including the six-intersection example, is in
-[code/a_star.py](../../code/a_star.py). It provides standard A* and a weighted
+[ch_12_code_a_star.py](ch_12_code_a_star.py). It provides standard A* and a weighted
 A* variant. Weighted A* scales the heuristic by a factor `epsilon`; values
 greater than 1 can guide the search more aggressively but give up the standard
 optimality guarantee.
 
 Run the file directly to see the example. Standard A* finds the path
 `S → B → D → G` with cost 10.
-

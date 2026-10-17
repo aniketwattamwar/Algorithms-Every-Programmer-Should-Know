@@ -2,6 +2,10 @@
 
 Gale-Shapley is a stable matching algorithm that finds an assignment between two groups—such as students and universities—so that no pair would rather be matched with each other than with their assigned partner.
 
+## Python implementation
+
+The implementation is in [ch_2_code_gale_shapley.py](ch_2_code_gale_shapley.py).
+
 ## Pseudocode
 
 ```text

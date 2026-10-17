@@ -2,10 +2,10 @@
 
 The Bron-Kerbosch algorithm finds every maximal clique in an undirected graph. A clique is a set of vertices where every pair is connected. A maximal clique cannot be extended by adding another adjacent vertex.
 
-The implementation is available in [`code/bron_kerbosch.py`](../../code/bron_kerbosch.py). Run it from the repository root with:
+The implementation is available in [`ch_11_code_bron_kerbosch.py`](ch_11_code_bron_kerbosch.py). Run it from the repository root with:
 
 ```text
-python code/bron_kerbosch.py
+python chapters/part-04-graph-algorithms/ch_11_code_bron_kerbosch.py
 ```
 
 ## Graph Example
@@ -116,4 +116,3 @@ BRON-KERBOSCH-WITH-PIVOT(R, P, X):
 ```
 
 Call `find_maximal_cliques(use_pivot=False)` to run the standard algorithm or use the default `True` value for the pivoted version. The module includes examples of both.
-

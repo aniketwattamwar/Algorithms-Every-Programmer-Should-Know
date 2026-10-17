@@ -2,6 +2,10 @@
 
 The Knapsack Algorithm, specifically the 0/1 Knapsack Problem, is a classic optimization problem solved using Dynamic Programming. The goal is to maximize the total value of items placed in a knapsack without exceeding its weight capacity.
 
+## Python implementation
+
+The implementation is in [ch_7_code_knapsack.py](ch_7_code_knapsack.py).
+
 ## Pseudocode
 
 ```text

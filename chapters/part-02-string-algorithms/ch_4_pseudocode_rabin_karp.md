@@ -2,6 +2,10 @@
 
 Rabin-Karp uses a rolling hash to locate occurrences of a pattern within text. It compares hash values first, and only verifies character equality when the hashes match.
 
+## Python implementation
+
+The implementation is in [ch_4_code_rabin_karp.py](ch_4_code_rabin_karp.py).
+
 ## Pseudocode
 
 ```text

@@ -2,10 +2,10 @@
 
 The push-relabel algorithm computes a maximum flow in a directed graph with capacities. It first creates a preflow by saturating the edges leaving the source. Vertices that receive more flow than they can send onward hold this amount as excess. The algorithm repeatedly pushes excess along admissible residual edges or relabels a vertex when no such edge is available.
 
-The implementation is available in [`code/push_relabel.py`](../../code/push_relabel.py). Run it from the repository root with:
+The implementation is available in [`ch_10_code_push_relabel.py`](ch_10_code_push_relabel.py). Run it from the repository root with:
 
 ```text
-python code/push_relabel.py
+python chapters/part-04-graph-algorithms/ch_10_code_push_relabel.py
 ```
 
 ## Book Example
@@ -60,4 +60,3 @@ Return excess[sink]
 ## Python Implementation Notes
 
 `capacity` stores the original directed capacities, while `flow` stores the current skew-symmetric flow. A negative value in `flow[v][u]` represents residual capacity that can cancel flow previously sent from `u` to `v`. The runnable file includes the book graph and two additional examples.
-
