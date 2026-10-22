@@ -8,6 +8,9 @@ The folders and files are listed below in chapter order.
 Folder: [chapter-01-language-of-algorithms/](chapters/chapter-01-language-of-algorithms/)
 
 - [ch_1_the_language_of_algorithms.md](chapters/chapter-01-language-of-algorithms/ch_1_the_language_of_algorithms.md)
+- [ch_1_code_linear_data_structures.py](chapters/chapter-01-language-of-algorithms/ch_1_code_linear_data_structures.py)
+- [ch_1_code_trees.py](chapters/chapter-01-language-of-algorithms/ch_1_code_trees.py)
+- [ch_1_code_graphs.py](chapters/chapter-01-language-of-algorithms/ch_1_code_graphs.py)
 
 ## Chapter 2: Gale-Shapley
 
