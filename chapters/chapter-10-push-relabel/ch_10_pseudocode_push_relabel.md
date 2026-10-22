@@ -5,7 +5,7 @@ The push-relabel algorithm computes a maximum flow in a directed graph with capa
 The implementation is available in [`ch_10_code_push_relabel.py`](ch_10_code_push_relabel.py). Run it from the repository root with:
 
 ```text
-python chapters/part-04-graph-algorithms/ch_10_code_push_relabel.py
+python chapters/chapter-10-push-relabel/ch_10_code_push_relabel.py
 ```
 
 ## Book Example

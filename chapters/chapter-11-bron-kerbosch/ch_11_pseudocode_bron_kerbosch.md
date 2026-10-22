@@ -5,7 +5,7 @@ The Bron-Kerbosch algorithm finds every maximal clique in an undirected graph. A
 The implementation is available in [`ch_11_code_bron_kerbosch.py`](ch_11_code_bron_kerbosch.py). Run it from the repository root with:
 
 ```text
-python chapters/part-04-graph-algorithms/ch_11_code_bron_kerbosch.py
+python chapters/chapter-11-bron-kerbosch/ch_11_code_bron_kerbosch.py
 ```
 
 ## Graph Example
