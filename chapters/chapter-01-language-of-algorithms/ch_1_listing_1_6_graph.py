@@ -1,9 +1,8 @@
 from collections import deque
-from typing import Any
 
 
-def graph_dfs(graph: dict[Any, list[Any]], start_node: Any) -> list[Any]:
-    """Return an iterative depth-first traversal of a graph."""
+def graph_dfs(graph, start_node):
+    """Return an iterative depth-first traversal of an adjacency-list graph."""
     if start_node not in graph:
         return []
 
@@ -25,8 +24,8 @@ def graph_dfs(graph: dict[Any, list[Any]], start_node: Any) -> list[Any]:
     return traversal_output
 
 
-def graph_bfs(graph: dict[Any, list[Any]], start_node: Any) -> list[Any]:
-    """Return an iterative breadth-first traversal of a graph."""
+def graph_bfs(graph, start_node):
+    """Return an iterative breadth-first traversal of an adjacency-list graph."""
     if start_node not in graph:
         return []
 
@@ -46,7 +45,7 @@ def graph_bfs(graph: dict[Any, list[Any]], start_node: Any) -> list[Any]:
     return traversal_output
 
 
-def main() -> None:
+def main():
     graph = {
         "A": ["B", "C"],
         "B": ["A", "D", "E"],
@@ -56,8 +55,8 @@ def main() -> None:
         "F": ["C", "E"],
     }
 
-    print("Depth-first traversal:", graph_dfs(graph, "A"))
-    print("Breadth-first traversal:", graph_bfs(graph, "A"))
+    print("Depth-first:", graph_dfs(graph, "A"))
+    print("Breadth-first:", graph_bfs(graph, "A"))
 
 
 if __name__ == "__main__":
