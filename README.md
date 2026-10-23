@@ -8,9 +8,12 @@ The folders and files are listed below in chapter order.
 Folder: [chapter-01-language-of-algorithms/](chapters/chapter-01-language-of-algorithms/)
 
 - [ch_1_the_language_of_algorithms.md](chapters/chapter-01-language-of-algorithms/ch_1_the_language_of_algorithms.md)
-- [ch_1_code_linear_data_structures.py](chapters/chapter-01-language-of-algorithms/ch_1_code_linear_data_structures.py)
-- [ch_1_code_trees.py](chapters/chapter-01-language-of-algorithms/ch_1_code_trees.py)
-- [ch_1_code_graphs.py](chapters/chapter-01-language-of-algorithms/ch_1_code_graphs.py)
+- [ch_1_listing_1_1_linked_list.py](chapters/chapter-01-language-of-algorithms/ch_1_listing_1_1_linked_list.py)
+- [ch_1_listing_1_2_doubly_linked_list.py](chapters/chapter-01-language-of-algorithms/ch_1_listing_1_2_doubly_linked_list.py)
+- [ch_1_listing_1_3_stack.py](chapters/chapter-01-language-of-algorithms/ch_1_listing_1_3_stack.py)
+- [ch_1_listing_1_4_queue.py](chapters/chapter-01-language-of-algorithms/ch_1_listing_1_4_queue.py)
+- [ch_1_listing_1_5_tree.py](chapters/chapter-01-language-of-algorithms/ch_1_listing_1_5_tree.py)
+- [ch_1_listing_1_6_graph.py](chapters/chapter-01-language-of-algorithms/ch_1_listing_1_6_graph.py)
 
 ## Chapter 2: Gale-Shapley
 
