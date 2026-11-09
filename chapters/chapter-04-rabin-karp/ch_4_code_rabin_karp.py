@@ -28,19 +28,20 @@ def rabin_karp(text, pattern):
     """
     n = len(text)
     m = len(pattern)
-    base = 10  # Base for hashing (can be any number, 10 is simple)
+    base = 10
+    mod = 1_000_000_007
     
     if m == 0 or n < m:
         return []
         
     pattern_hash = 0
     window_hash = 0
-    h_multiplier = base ** (m - 1)  # Precompute multiplier for rolling hash
+    h_multiplier = pow(base, m - 1, mod)
     
     # Calculate initial hash values for pattern and first window
     for i in range(m):
-        pattern_hash = pattern_hash * base + char_to_int(pattern[i])
-        window_hash = window_hash * base + char_to_int(text[i])
+        pattern_hash = (pattern_hash * base + char_to_int(pattern[i])) % mod
+        window_hash = (window_hash * base + char_to_int(text[i])) % mod
         
     matches = []
     
@@ -55,7 +56,9 @@ def rabin_karp(text, pattern):
         if i < n - m:
             old_char_val = char_to_int(text[i])
             new_char_val = char_to_int(text[i + m])
-            window_hash = (window_hash - old_char_val * h_multiplier) * base + new_char_val
+            window_hash = (
+                (window_hash - old_char_val * h_multiplier) * base + new_char_val
+            ) % mod
             
     return matches
 
