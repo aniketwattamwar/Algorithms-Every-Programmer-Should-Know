@@ -25,6 +25,14 @@ The implementation is in [ch_6_code_horspool.py](ch_6_code_horspool.py).
 - A complete match returns the starting index, and then the algorithm continues by
   advancing the search window.
 
+## Performance
+
+Horspool can skip many text positions, and on large alphabets it typically examines
+only a fraction of the text characters. Its average running time is still
+Theta(n); the best case is O(n/m), while the worst case is O(nm).
+Longer patterns can improve shifts, but do not necessarily make the search faster:
+the average shift depends on the text and the pattern.
+
 ## Pseudocode
 
 ```text

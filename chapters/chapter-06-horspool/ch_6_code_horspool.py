@@ -1,3 +1,8 @@
+import argparse
+import time
+import random
+
+
 def build_bad_char_table(pattern):
     """
     Constructs the bad character shift table for Horspool's algorithm.
@@ -64,5 +69,52 @@ def run_test(text, pattern):
     print(f"Matches at positions: {matches}\n")
 
 
+def generate_text(alphabet, size, seed=42):
+    rng = random.Random(seed)
+    return "".join(rng.choices(alphabet, k=size))
+
+
+def median_ms(text, pattern, runs=11):
+    times = []
+    for _ in range(runs):
+        start = time.perf_counter()
+        horspool_search(text, pattern)
+        elapsed = (time.perf_counter() - start) * 1000
+        times.append(elapsed)
+    times.sort()
+    return times[len(times) // 2]
+
+
+def run_benchmark():
+    """Compare Horspool performance across different alphabet sizes."""
+    text_size = 200_000
+
+    inputs = [
+        ("English (26 chars)", "abcdefghijklmnopqrstuvwxyz"),
+        ("DNA     ( 4 chars)", "acgt"),
+        ("Binary  ( 2 chars)", "ab"),
+    ]
+
+    for label, alphabet in inputs:
+        text = generate_text(alphabet, text_size)
+        print(label)
+        for m in [8, 32, 128]:
+            pattern = text[text_size // 2 : text_size // 2 + m]
+            ms = median_ms(text, pattern)
+            print(f"  pattern length {m:>3}: {ms:6.2f} ms")
+        print()
+
+
 if __name__ == "__main__":
-    run_test("abcxabcdabxabcdabcdabcy", "abcdabcy")
+    parser = argparse.ArgumentParser(description="Run the Horspool search examples.")
+    parser.add_argument(
+        "--benchmark",
+        action="store_true",
+        help="compare Horspool on English, DNA, and binary text",
+    )
+    args = parser.parse_args()
+
+    if args.benchmark:
+        run_benchmark()
+    else:
+        run_test("abcxabcdabxabcdabcdabcy", "abcdabcy")
